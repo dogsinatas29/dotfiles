@@ -16,7 +16,23 @@ polybar : polybar 설정 - nord themes를 거의 수정없이 가져다 쓴 설�
 <br>
 3. nvim : nvim 설정 <br>
 ![image](https://github.com/user-attachments/assets/d7f2ac4e-c178-4a11-9ca5-1dc5e1a2f2a7)
-엔간한 Plug은 거의 로드되어 있습니다. <br>
+Plug으로 플러그인을 업데이트합니다. <br>
+Plug 'sainnhe/gruvbox-material/' <br>
+Plug 'mhinz/vim-startify' <br>
+Light Line themes 플러그 <br>
+Plug 'itchyny/lightline.vim' <br>
+Plug 'scrooloose/nerdtree' <br>
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} <br>
+Plug 'nvim-treesitter/playground' <br>
+Plug 'yegappan/taglist' <br>
+Plug 'neoclide/coc.nvim', {'brach': 'release'} <br>
+Plug 'jackguo380/vim-lsp-cxx-highlight' <br>
+Plug 'neovim/nvim-lspconfig' <br>
+Plug 'chrisbra/csv.vim' <br>
+Plug 'blueyed/vim-diminactive' <br>
+Plug 'ryanoasis/vim-devicons' <br>
+Plug 'nvim-lua/plenary.nvim' <br>
+Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>
 테마는 GruvBox입니다. <br>
 
 4. neofetch : neofetch 설정<br>
