@@ -23,106 +23,96 @@ neofetch : neofetch 설정<br>
 OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
 
 사용중인 Gnome 확장<br>
-설치한 확장
-[QSTweak] Quick Setting Tweaker by qwreey
-Let's tweak gnome 43's quick settings! You can add Media Controls, Notifications, Volume Mixer on quick settings and remove useless buttons!
 
-Applications Overview Tooltip by RaphaelR
-Shows a tooltip over applications icons on applications overview with application name and/or description.
+[QSTweak] Quick Setting Tweaker by qwreey<br>  
+https://extensions.gnome.org/extension/5446/quick-settings-tweaker/<br>
 
-ArcMenu by andrew_z
-Application menu for GNOME Shell
+Applications Overview Tooltip by RaphaelR<br>
+https://extensions.gnome.org/extension/1071/applications-overview-tooltip/<br>
 
-Auto Move Windows by fmuellner
-Move applications to specific workspaces when they create windows.
+ArcMenu by andrew_z<br>
+https://extensions.gnome.org/extension/3628/arcmenu/<br>
 
-Burn My Windows by Simon Schneegans
-Disintegrate your windows with style.
+Auto Move Windows by fmuellner<br>
+https://extensions.gnome.org/extension/16/auto-move-windows/<br>
 
-Caffeine by eon
-Disable the screensaver and auto suspend
+Burn My Windows by Simon Schneegans<br>
+https://extensions.gnome.org/extension/4679/burn-my-windows/<br>
+Caffeine by eon<br>
 
-Compiz alike magic lamp effect by hermes83
-Magic lamp effect inspired by the Compiz ones
+Compiz alike magic lamp effect by hermes83<br>
+https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/<br>
 
-Compiz windows effect by hermes83
-Compiz wobbly windows effect thanks to compiz plugin engine.
+Compiz windows effect by hermes83<br>
+https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/<br>
 
-Coverflow Alt-Tab by dsheeler
-Replacement of Alt-Tab, iterates through windows in a cover-flow manner.
+Coverflow Alt-Tab by dsheeler<br>
+https://extensions.gnome.org/extension/97/coverflow-alt-tab/<br>
 
-Dash to Dock by michele_g
-A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops. Side and bottom placement options are available.
+Dash to Dock by michele_g<br>
+https://extensions.gnome.org/extension/307/dash-to-dock/<br>
+우분투 독의 외관  설정을 위해 설치만 해두고 사용하지는 않습니다. 다만, 여기서 한 설정은 우분투 독에 그대로 적용됩니다.<br>
 
-Desktop Icons NG (DING) by rastersoft
-시스템 확장
-Adds icons to the desktop. Fork of the original Desktop Icons extension, with several enhancements .
+Desktop Icons NG (DING) by rastersoft<br>
+https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/<br>
+우분투에 기본으로 딸려오는 확장입니다. 딱히 업데이트하지 않습니다. <br>
 
-Frippery Move Clock by rmyorston
-Move clock to left of status menu button
+Frippery Move Clock by rmyorston <br>
+https://extensions.gnome.org/extension/2/move-clock/<br>
 
-Gnome 4x UI Improvements by AXP
-Tunes gnome 4x Overview UI to make it more usable.
+Gnome 4x UI Improvements by AXP<br>
+https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
 
-GNOME Fuzzy App Search by charlotte
-Fuzzy application search results for Gnome Search
+GNOME Fuzzy App Search by charlotte<br>
+https://extensions.gnome.org/extension/3956/gnome-fuzzy-app-search/<br>
 
-Grand Theft Focus by zalckos
-Removes the 'Window is ready' notification and brings the window into focus instead.
 
-Gravatar by dsheeler
-Synchronize GNOME Shell user icon with an avatar service, one of Gravatar or Libravatar.
+Grand Theft Focus by zalckos<br>
+https://extensions.gnome.org/extension/5410/grand-theft-focus/<br>
 
-Multi Monitors Add-On by spin83
-Add multiple monitors overview and panel for gnome-shell.
+Gravatar by dsheeler<br>
+https://extensions.gnome.org/extension/6922/gravatar/<br>
 
-Mute spotify ads by danigm
-Mute spotify ads
+Multi Monitors Add-On by spin83<br>
+https://extensions.gnome.org/extension/921/multi-monitors-add-on/<br>
 
-Native Window Placement by fmuellner
-Arrange windows in overview in a more compact way.
+Mute spotify ads by danigm<br>
+https://extensions.gnome.org/extension/2176/mute-spotify-ads/<br>
 
-No overview at start-up by fthx
-No overview at start-up. Nothing more.
+Native Window Placement by fmuellner<br>
+https://extensions.gnome.org/extension/18/native-window-placement/<br>
 
-Pipewire Settings by gahel
-Top bar menu to set Pipewire's buffer size and samplerate
+No overview at start-up by fthx<br>
+https://extensions.gnome.org/extension/4099/no-overview/<br>
 
-Search Light by icedman
-Take the apps search out of overview.
+Pipewire Settings by gahel<br>
+https://extensions.gnome.org/extension/7699/pipewire-settings/<br>
 
-Sound Visualizer by raihan2000
-A Real Time Sound Visualizer Based On Gstreamer
+Search Light by icedman<br>
+https://extensions.gnome.org/extension/5489/search-light/<br>
+이건 반드시 사용해주어야 할 확장기능입니다. 그놈의 기본 기능으로 들어가주었으면 합니다<br>
 
-Space Bar by luchrioh
-Replaces the top-panel workspace indicator with an i3-like workspaces bar.
+Space Bar by luchrioh <br>
+https://extensions.gnome.org/extension/5090/space-bar/<br>
 
-Spotify Controls + Track Info by Sonath21
-GNOME 45+ extension that integrates Spotify playback controls directly into your GNOME top bar. This extension is not affiliated, funded, or in any way associated with Spotify.
+Spotify Controls + Track Info by Sonath21<br>
+https://extensions.gnome.org/extension/7406/spotify-controls/<br>
 
-Tactile by lundal
-Tile windows on a custom grid using your keyboard. Type Super-T to show the grid, then type two tiles (or the same tile twice) to move the active window.
+Tactile by lundal<br>
+https://extensions.gnome.org/extension/4548/tactile/<br>
+그놈에서 단축키를 사용한 타일 기능을 구현해줍니다. 몇몇 다른 확장들도 있긴 하지만 사용 편리성에서는 갑입니다. <br>
 
-Ubuntu AppIndicators by didrocks
-시스템 확장
-This a mock extension. It does nothing if installed from extensions.gnome.org. Please use KStatusNotifierItem/AppIndicator Support which provides the same functionalities. This name is used to protect and reserve the name for ubuntu appindicator, available as a system extension on ubuntu. This allow us to not trump updates outside of our QA process via an external upload.
+User Avatar In Quick Settings by d-go<br>
+https://extensions.gnome.org/extension/5506/user-avatar-in-quick-settings/<br>
+그라바타 확장과 함께 사용하시면 됩니다. 
 
-Ubuntu Dock by didrocks
-시스템 확장
-This a mock extension. It does nothing if installed from extensions.gnome.org. Please use dash to dock which provides the same functionalities with different defaults. This name is used to protect and reserve the name for ubuntu dock, available as a system extension on ubuntu. This allow us to not trump updates outside of our QA process via an external upload.
+User Themes by fmuellner <br>
+https://extensions.gnome.org/extension/19/user-themes/
 
-Ubuntu Tiling Assistant
-시스템 확장
-Expand GNOME's 2 column tiling and add a Windows-snap-assist-inspired popup...
+V-Shell by GdH<br>
+https://extensions.gnome.org/extension/5177/vertical-workspaces/<br>
+아래의 WSM과 반드시 함께 사용하세요. 레거시 그놈의 향수를 불러 일으키는 확장입니다. <br>
 
-User Avatar In Quick Settings by d-go
-Display the user avatar in the Quick Settings menu, part of the "System" settings
+WSM (Workspace Switcher Manager) by GdH<br>
+https://extensions.gnome.org/extension/4788/workspace-switcher-manager/<br>
 
-User Themes by fmuellner
-Load shell themes from user directory.
-
-V-Shell by GdH
-V-Shell is designed to enhance and customize the user experience by providing flexible workspace orientations and a variety of interface adjustments.
-
-WSM (Workspace Switcher Manager) by GdH
-Make the workspace switcher popup useful! Customize your workspace switcher behavior and the content, dimensions, position, orientation and colors of its popup indicator.
