@@ -16,7 +16,7 @@ polybar : polybar 설정 - nord themes를 거의 수정없이 가져다 쓴 설�
 nvim : nvim 설정 <br>
 ![image](https://github.com/user-attachments/assets/d7f2ac4e-c178-4a11-9ca5-1dc5e1a2f2a7)
 엔간한 Plug은 거의 로드되어 있습니다. <br>
-GruvBox 기반으로 만들어져 있습니다. <br>
+테마는 GruvBox입니다. <br>
 
 neofetch : neofetch 설정<br>
 ![image](https://github.com/user-attachments/assets/e083d14d-29d1-4dcd-a706-0bd34bcf0b10)
