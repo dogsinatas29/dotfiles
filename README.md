@@ -5,7 +5,7 @@
 .zshrc : zshrc 설정파일<br>
 ![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982)
 
-<tilingmanager with i3 and polybar><br>
+i3wm with polybar
 EndeavourOS에서 작업했기에 XFCE4의 터미널과 편집기가 그대로 보입니다.<br>
 ![image](https://github.com/user-attachments/assets/0dc0cc1e-c28e-4c10-9914-93e2d71b0940)
 
