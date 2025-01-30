@@ -1,4 +1,5 @@
 # dotfiles
+![image](https://github.com/user-attachments/assets/b62cbed4-9c04-4828-985d-552bae2865b2)
 
 내가 사용하는 간단한 설정 파일들입니다. 
 
