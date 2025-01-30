@@ -1,5 +1,10 @@
 # dotfiles
 .zshrc : zshrc 설정파일<br>
+![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982)
+
+<tilingmanager><br>
+![image](https://github.com/user-attachments/assets/0dc0cc1e-c28e-4c10-9914-93e2d71b0940)
+
 i3 : i3 설정<br>
 polybar : polybar 설정 - nord themes<br>
 nvim : nvim 설정 <br>
