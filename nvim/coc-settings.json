@@ -1,0 +1,9 @@
+{
+  "languageserver": {
+    "python": {
+      "command": "pyright-langserver",
+      "rootPatterns": [".pyproject", "pyproject.toml", "setup.py", ".git"],
+      "filetypes": ["python"]
+    }
+  }
+}
