@@ -1,0 +1,9 @@
+// @theme "~/.local/share/rofi/themes/arc_dark_transparent_colors.rasi"
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+
+@theme "/home/dogsinatas/.local/share/rofi/themes/arc_dark_transparent_colors.rasi"
