@@ -14,6 +14,16 @@ i3 : EndeavourOS의 i3 설정을 기반으로 몇몇 부분에 손을 댄 설정
 그놈 박스에서 작업했을 때 mod4 키를 호스트에서 인식해버리는 바람에 xmodmap으로 키 구성을 바꾸었습니다.<br>
 polybar : polybar 설정 - nord themes를 거의 수정없이 가져다 쓴 설정 파일입니다. <br>
 <br>
+모니터 설정을 하시려면 
+set $monitor1 "HDMI-0"
+set $monitor2 "DVI-D-0"
+workspace $ws1 output HDMI-0
+workspace $ws2 output DVI-D-0
+workspace $ws3 output HDMI-0
+workspace $ws4 output DVI-D-0
+workspace $ws5 output HDMI-0
+workspace $ws6 output DVI-D-0
+이 부분을 조정하세요
 3. nvim : nvim 설정 <br>
 ![image](https://github.com/user-attachments/assets/d7f2ac4e-c178-4a11-9ca5-1dc5e1a2f2a7)
 Plug으로 플러그인을 업데이트합니다. <br>
