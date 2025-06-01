@@ -2,9 +2,9 @@
 기본적으로 gnome환경과 i3wm 환경을 번갈아가면서 사용중입니다. <br?
 i3wm은 내 마음에 들도록 바꾸고는 있지만 아직은 어렵네요. <br> 
 최종적으로는 i3를 현재의 gnome 환경과 유사하게 바꾸는 걸 목표로 하고 있습니다. <br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/gnome.png) <br>
+![Gnome Screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/gnome.png)
 1. .zshrc : zshrc 설정파일<br>
-![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982) <br>
+![Zshrc Screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/zshrc.png)
 <br>
 2. i3wm with polybar<br>
 ![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/i3-screenshot.png) <br>
