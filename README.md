@@ -23,7 +23,7 @@ workspace $ws6 output DVI-D-0<br>
 이 부분을 조정하세요<br>
 <br>
 3. nvim : nvim 설정 <br>
-![nvim screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png) <br>
+![nvim screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png)
 Plug으로 플러그인을 업데이트합니다. <br>
 " 플러그 인 설치 <br>
 "======= nord themes <br>
@@ -52,12 +52,12 @@ Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>
 Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요<br>
 
 4. neofetch : neofetch 설정<br>
-![neofetch screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/neofetch.png) <br>
+![neofetch screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/neofetch.png)
 OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
 logo.txt에서 원하는 로고로 바꾸시면 됩니다<br>
 <br>
 5. cava <br>
-![cava screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/cava.png) <br>
+![cava screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/cava.png)
 nord 테마로 변경한 cava 설정입니다. <br>
 
 6. 내가 Gnome 환경에서 사용중인 확장 리스트<br>
