@@ -7,7 +7,7 @@ i3wm은 내 마음에 들도록 바꾸고는 있지만 아직은 어렵네요. <
 ![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982) <br>
 <br>
 2. i3wm with polybar<br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/i3-screenshot.png)
+![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/i3-screenshot.png) <br>
 <br>
 i3 : i3wm과 Polybar, 그리고 picom을 사용하고 있습니다. Nord 테마를 적용했습니다. <br>
 Polybar는 플로팅 스타일로 바꾸었습니다. 각 모듈에 반지름 적용을 하려고 하는데 잘 안되네요. <br>
