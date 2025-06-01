@@ -1,7 +1,7 @@
 # dotfiles
-![image](https://github.com/user-attachments/assets/b62cbed4-9c04-4828-985d-552bae2865b2)
-
-내가 사용하는 간단한 설정 파일들입니다. 
+기본적으로 gnome환경과 i3wm 환경을 번갈아가면서 사용중입니다. <br?
+i3wm은 내 마음에 들도록 바꾸고는 있지만 아직은 어렵네요. <br> 
+최종적으로는 i3를 현재의 gnome 환경과 유사하게 바꾸는 걸 목표로 하고 있습니다. <br>
 
 1. .zshrc : zshrc 설정파일<br>
 ![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982)
