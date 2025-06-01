@@ -7,7 +7,7 @@ i3wm은 내 마음에 들도록 바꾸고는 있지만 아직은 어렵네요. <
 ![Zshrc Screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/zshrc.png)
 <br>
 2. i3wm with polybar<br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/i3-screenshot.png) <br>
+![i3wm with polybar screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/i3-screenshot.png) <br>
 <br>
 i3 : i3wm과 Polybar, 그리고 picom을 사용하고 있습니다. Nord 테마를 적용했습니다. <br>
 Polybar는 플로팅 스타일로 바꾸었습니다. 각 모듈에 반지름 적용을 하려고 하는데 잘 안되네요. <br>
@@ -24,7 +24,7 @@ workspace $ws6 output DVI-D-0<br>
 이 부분을 조정하세요<br>
 <br>
 3. nvim : nvim 설정 <br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/nvim.png) <br>
+![nvim screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png) <br>
 Plug으로 플러그인을 업데이트합니다. <br>
 " 플러그 인 설치 <br>
 "======= nord themes <br>
@@ -53,12 +53,12 @@ Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>
 Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요<br>
 
 4. neofetch : neofetch 설정<br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/neofetch.png) <br>
+![neofetch screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/neofetch.png) <br>
 OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
 logo.txt에서 원하는 로고로 바꾸시면 됩니다<br>
 <br>
 5. cava <br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/cava.png) <br>
+![cava screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/cava.png) <br>
 nord 테마로 변경한 cava 설정입니다. <br>
 
 6. 내가 Gnome 환경에서 사용중인 확장 리스트<br>
