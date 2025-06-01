@@ -63,3 +63,5 @@ Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요
 OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
 
 5. cava <br>
+![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01%2021-10-16.png)
+nord 테마로 변경한 cava 설정입니다. <br>
