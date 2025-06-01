@@ -5,10 +5,10 @@ i3wm은 내 마음에 들도록 바꾸고는 있지만 아직은 어렵네요. <
 ![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01%2021-15-43.png) <br>
 1. .zshrc : zshrc 설정파일<br>
 ![image](https://github.com/user-attachments/assets/f6faf1cd-0985-4d45-ac20-e49e477e4982) <br>
-
+<br>
 2. i3wm with polybar<br>
 ![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01-19%3A23%3A46-screenshot.png) <br>
-
+<br>
 i3 : i3wm과 Polybar, 그리고 picom을 사용하고 있습니다. Nord 테마를 적용했습니다. <br>
 Polybar는 플로팅 스타일로 바꾸었습니다. 각 모듈에 반지름 적용을 하려고 하는데 잘 안되네요. <br>
 <br>
@@ -22,22 +22,17 @@ workspace $ws4 output DVI-D-0<br>
 workspace $ws5 output HDMI-0<br>
 workspace $ws6 output DVI-D-0<br>
 이 부분을 조정하세요<br>
-
-
-
+<br>
 3. nvim : nvim 설정 <br>
 ![image](https://github.com/user-attachments/assets/d7f2ac4e-c178-4a11-9ca5-1dc5e1a2f2a7) <br>
 Plug으로 플러그인을 업데이트합니다. <br>
 " 플러그 인 설치 <br>
 "======= nord themes <br>
 Plug 'shaunsingh/nord.nvim' <br>
-
 "Light Line themes 플러그 <br>
 Plug 'itchyny/lightline.vim' <br>
-
 " 스타티파이 플러그 인 <br>
 Plug 'mhinz/vim-startify' <br>
-
 " 프로그램 관련 플러그 인 <br>
 Plug 'scrooloose/nerdtree' <br>
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} <br>
@@ -50,18 +45,18 @@ Plug 'neovim/nvim-lspconfig' <br>
 Plug 'chrisbra/csv.vim' <br>
 Plug 'blueyed/vim-diminactive' <br>
 Plug 'ryanoasis/vim-devicons' <br>
-
 " telescope 플러그 <br>
 Plug 'nvim-lua/plenary.nvim' <br>
 Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>
-
+<br>
 테마는 Nord 테마입니다.  <br>
 Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요<br>
 
 4. neofetch : neofetch 설정<br>
 ![image](https://github.com/user-attachments/assets/e083d14d-29d1-4dcd-a706-0bd34bcf0b10) <br>
 OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
-
+logo.txt에서 원하는 로고로 바꾸시면 됩니다<br>
+<br>
 5. cava <br>
 ![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01%2021-10-16.png) <br>
 nord 테마로 변경한 cava 설정입니다. <br>
