@@ -23,7 +23,7 @@ workspace $ws6 output DVI-D-0<br>
 이 부분을 조정하세요<br>
 <br>
 3. nvim : nvim 설정 <br>
-![nvim screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png)
+![i3wm with polybar screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png)
 Plug으로 플러그인을 업데이트합니다. <br>
 " 플러그 인 설치 <br>
 "======= nord themes <br>
