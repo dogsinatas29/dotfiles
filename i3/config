@@ -37,10 +37,8 @@ set $im ibus
 exec --no-startup-id ibus-daemon -drx
 	
 # polybar themes 
+# exec ~/.config/polybar/forest/launch.sh
 exec ~/.config/polybar/launch.sh
-
-# 배경화면 바꾸기 스크립트
-exec ~/.wallpaper.sh
 
 #####################
 # workspace layout: #
@@ -68,8 +66,19 @@ new_window pixel 1
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+gaps outer 10
+gaps inner 15
+gaps top 40
+gaps bottom 10
+
+for_window [class="^.*"] border pixel 1
+
+default_floating_border pixel 1
+default_border pixel 1
+
+for_window [class="Dunst"] border pixel 1
+exec_always dunst
+for_window [class="Dunst"] focus mode="always"
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -186,7 +195,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 ######################################
 
 # start a terminal 
-bindsym $mod+Return exec --no-startup-id "xfce4-terminal -e zsh"
+bindsym $mod+Return exec --no-startup-id "gnome-terminal -e zsh"
 
 # kill focused window
 bindsym $mod+q kill
@@ -304,7 +313,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/google-chrome-stable
-bindsym $mod+n exec --no-startup-id /usr/bin/thunar
+bindsym $mod+n exec --no-startup-id nautilus
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
@@ -330,21 +339,24 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
+set $monitor1 "HDMI-0" 
+set $monitor2 "DVI-D-0" 
+workspace $ws1 output HDMI-0 
+workspace $ws2 output DVI-D-0 
+workspace $ws3 output HDMI-0 
+workspace $ws4 output DVI-D-0 
+workspace $ws5 output HDMI-0 
+workspace $ws6 output DVI-D-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
+assign [class="gnome-terminal"] $ws1
 assign [class="(?i)google-chrome"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Xfce4-terminal] focus
+for_window [class=gnome-terminal] focus
 for_window [class=(?i)google-chrome] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
@@ -377,7 +389,7 @@ for_window [class=TelegramDesktop] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+# exec_always --no-startup-id sleep 1 && picom
 
 #############################################
 # autostart applications/services on login: #
@@ -412,7 +424,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+exec --no-startup-id sleep 1 && feh --bg-fill --no-xinerama "/home/dogsinatas/.config/i3/backgrounds/wall.jpg"
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600

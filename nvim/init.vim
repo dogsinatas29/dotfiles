@@ -7,7 +7,9 @@ call plug#begin('~/.vim/plugged')
 
 " 플러그 인 설치
 "=============테마 플러그 인 설정
-Plug 'sainnhe/gruvbox-material/'
+"Plug 'sainnhe/gruvbox-material/'
+"======= nord themes
+Plug 'shaunsingh/nord.nvim'
 
 "Light Line themes 플러그
 Plug 'itchyny/lightline.vim'
@@ -20,17 +22,19 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'yegappan/taglist'
-Plug 'neoclide/coc.nvim', {'brach': 'release'}
+Plug 'github/copilot.vim'
+Plug 'tpope/vim-fugitive' " Git Wrapper
+" Plug 'neoclide/coc.nvim', {'brach': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'neovim/nvim-lspconfig'
 Plug 'chrisbra/csv.vim'
 Plug 'blueyed/vim-diminactive'
 Plug 'ryanoasis/vim-devicons'
 
-
 " telescope 플러그
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim' " 태그 제거
+
 
 " 플러그인 시스템 초기화
 call plug#end()
@@ -39,6 +43,7 @@ call plug#end()
 set termguicolors
 
 " NVIM 설정
+
 " Line number 관련 설정
 set nu
 " set relativenumber
@@ -49,60 +54,45 @@ let g:python3_host_prog = '/home/dogsinatas/.venv/bin/python3'
 let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 
-"let g:bard_enabled = 1
-"let g:bard_api_key = 'YOUR_API_KEY'
-"let g:bard_suggest_on_keystroke = 0
-"let g:bard_auto_start = 1
-
 " syntax highlight
 syntax enable
 syntax on
-filetype on
-
+"filetype on
+filetype plugin indent on
 "==================== 테마 관련 설정임. 테마에 따라 해당 설정을 온오프 시킬 것. airline theme는 별도로 설정할 것
-"=========================gruvbox 설정
-"set termguicolors
-"set background=dark
-"let g:gruvbox_italic=1
-"let g:gruvbox_contrast_dark='hard'
-"colo gruvbox
-""colo desert
 
 "================== gruvbox_material 설정
-    let g:gruvbox_material_background = 'hard'
-    let g:gruvbox_material_better_performance = 1
-    let g:gruvbox_material_enable_italic=1
-    let g:gruvbox_material_enable_bold=1
-    let g:gruvbox_material_cursor='auto'
-    let g:gruvbox_material_transparent_background=2
-    let g:gruvbox_material_visual='red background'
-    let g:gruvbox_material_disable_terminal_colors=1
-    let g:gruvbox_material_better_performance=1
-    let g:gruvbox_material_telescope_theme = 1
-    colorscheme gruvbox-material
+"    let g:gruvbox_material_background = 'hard'
+"    let g:gruvbox_material_better_performance = 1
+"    let g:gruvbox_material_enable_italic=1
+"    let g:gruvbox_material_enable_bold=1
+"    let g:gruvbox_material_cursor='auto'
+"    let g:gruvbox_material_transparent_background=2
+"    let g:gruvbox_material_visual='red background'
+"    let g:gruvbox_material_disable_terminal_colors=1
+"    let g:gruvbox_material_better_performance=1
+"    let g:gruvbox_material_telescope_theme = 1
+"    colorscheme gruvbox-material
 
-" ============ catppuccin themes 설정 
-"vim.cmd.colorscheme "catppuccin-macchiato"
+"Vim-Script:
 
-"==== nord 테마 설정
-"colorscheme nord
-"let g:nord_transparent_mode = 1
+colorscheme nord
+let g:nord_contrast = v:true
+let g:nord_borders = v:false
+let g:nord_disable_background = v:false
+let g:nord_italic = v:false
+let g:nord_uniform_diff_background = v:true
+let g:nord_bold = v:false
 
-"============== gruvbox-baby 설정
-"let g:gruvbox_baby_function_style = "NONE"
-"let g:gruvbox_baby_keyword_style = "italic"
-" 그루브박스 베이비 Enable telescope theme
-"let g:gruvbox_baby_telescope_theme = 1
-" Enable transparent mode
-"let g:gruvbox_baby_transparent_mode = 1
+
+
 " Load the colorscheme
-"colorscheme gruvbox-baby
-
+colorscheme nord
 " nerdtree
 map <Leader>nt <ESC>:NERDTree<CR>
+
 " NERDTree ON 단축키를 "\nt"로 설정
 map <Leader>nt <ESC>:NERDTree<CR>
-
 
 "======================NERDTREE
 " NERDTree 숨김 파일 보이기
@@ -113,7 +103,6 @@ autocmd VimEnter * NERDTree | wincmd p
 let g:NERDTreeSyntax=1
 
 " ==================== vim startify 설정
-
 highlight StartifyFooter guifg=#ebdbb2 guibg=#202020
 highlight StartifyFooter guifg=#ebdbb2 guibg=#202020
 
@@ -156,12 +145,12 @@ let g:startify_lists = [
       \ ]
 " ==================== vim startify 설정 끝
 
-"===========TagList 설정
+" ===========TagList 설정
 let Tlist_Auto_Open = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Exit_OnlyWindow = 1
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 " ======= Coc 설정
 " coc.nvim
@@ -186,7 +175,7 @@ else
   set signcolumn=yes
 endif
 " Settings for neovim: nevoim does not support signcolumn+number column yet
-set signcolumn=no
+"set signcolumn=no
 hi coc_err_hi ctermfg=1 ctermbg=15
 sign define coc_err numhl=coc_err_hi
 sign place 1 line=2 name=coc_err
@@ -265,17 +254,7 @@ xmap ic <Plug>(coc-classobj-i)
 omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
-"" Remap <C-f> and <C-b> for scroll float windows/popups.
-"if has('nvim-0.4.0') || has('patch-8.2.0750')
-"  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-"  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-"  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-"  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-"  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-"  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-"endif
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
+
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
@@ -291,23 +270,30 @@ highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Re
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 " Floating window background=white, foreground=black
+
 " CocFloating - Pmenu의 옆에 나오는 box & error시 나오는 box
 highlight CocFloating ctermbg=white ctermfg=black
+
 "syntax
 syntax on
+
 "tap size
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
 "line number
 set number
+
 "set smartindent
 "hilight search
 set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> 
+
 "backspace
 set backspace=indent,eol,start
 set t_kb=
+
 "mouse wheel
 set mouse=a
 "set nowrap
@@ -441,7 +427,7 @@ let g:LanguageClient_serverCommands = {
 
 "lightline 플러그인 설정
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

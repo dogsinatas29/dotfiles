@@ -6,9 +6,12 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# 플러그인
 plugins=(
     git
+    autojump
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -19,14 +22,18 @@ source $ZSH/oh-my-zsh.sh
 # if command -v theme.sh > /dev/null; then
 #   [ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
 # fi
-
+#theme.sh gruvbox-material-dark-soft
+theme.sh nord
 # POWERLEVEL9K_INSTANT_PROMPT 설정 (Powerlevel9k 사용시에만 필요)
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias vi=nvim
+alias 퍄=nvim
 alias man=tldr
 alias ls=lsd
+alias ㅣㄴ=ls
+alias 칟ㅁㄱ=clear
 
 export NVIM_APPNAME=nvim
 
@@ -49,3 +56,7 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ".venv/bin/activate" ]; then
     source .venv/bin/activate
 fi
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+

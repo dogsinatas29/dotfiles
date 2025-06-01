@@ -1,9 +1,11 @@
 {
-  "languageserver": {
-    "python": {
-      "command": "pyright-langserver",
-      "rootPatterns": [".pyproject", "pyproject.toml", "setup.py", ".git"],
-      "filetypes": ["python"]
-    }
-  }
+    "languageserver": {
+        "python": {
+            "command": "pyright",
+            "rootPatterns": [".pyproject", "pyproject.toml", "setup.py", ".git"],
+            "filetypes": ["python"]
+        }
+    },
+    "showSignatureHelp": false
+    "npm.binPath": "/home/dogsinatas/.nvm/versions/node/v22.14.0/bin/npm"
 }
