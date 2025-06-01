@@ -24,7 +24,7 @@ workspace $ws6 output DVI-D-0<br>
 이 부분을 조정하세요<br>
 <br>
 3. nvim : nvim 설정 <br>
-![image](https://github.com/user-attachments/assets/d7f2ac4e-c178-4a11-9ca5-1dc5e1a2f2a7) <br>
+![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01_21-36-42.png) <br>
 Plug으로 플러그인을 업데이트합니다. <br>
 " 플러그 인 설치 <br>
 "======= nord themes <br>
@@ -58,7 +58,7 @@ OS 로고 대신 아스키 아트를 출력하도록 바꾸었습니다<br>
 logo.txt에서 원하는 로고로 바꾸시면 됩니다<br>
 <br>
 5. cava <br>
-![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01%2021-10-16.png) <br>
+![image](https://github.com/dogsinatas29/dotfiles/blob/main/screenshots/2025-06-01_21-10-16.png) <br>
 nord 테마로 변경한 cava 설정입니다. <br>
 
 6. 내가 Gnome 환경에서 사용중인 확장 리스트<br>
