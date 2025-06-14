@@ -21,10 +21,11 @@ Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
-Plug 'yegappan/taglist'
+Plug 'preservim/tagbar'
+Plug 'Yggdroot/indentLine'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-fugitive' " Git Wrapper
-" Plug 'neoclide/coc.nvim', {'brach': 'release'}
+" Plug 'neoclid:e/coc.nvim', {'brach': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'neovim/nvim-lspconfig'
 Plug 'chrisbra/csv.vim'
@@ -74,6 +75,11 @@ filetype plugin indent on
 "    let g:gruvbox_material_telescope_theme = 1
 "    colorscheme gruvbox-material
 
+" cursor 설정
+set cursorline
+highlight CursorLine guibg=#4C566A ctermbg=238 gui=NONE
+highlight CursorLineNr guibg=#4C566A ctermbg=238 guifg=#D8DEE9 ctermfg=251 gui=NONE
+
 "Vim-Script:
 
 colorscheme nord
@@ -84,10 +90,6 @@ let g:nord_italic = v:false
 let g:nord_uniform_diff_background = v:true
 let g:nord_bold = v:false
 
-
-
-" Load the colorscheme
-colorscheme nord
 " nerdtree
 map <Leader>nt <ESC>:NERDTree<CR>
 
@@ -145,12 +147,19 @@ let g:startify_lists = [
       \ ]
 " ==================== vim startify 설정 끝
 
-" ===========TagList 설정
-let Tlist_Auto_Open = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+" ============ Tagbar 설정
+let g:tagbar_autofocus = 1 " Tagbar 열릴 때 자동으로 포커스 이동
+let g:tagbar_width = 30    " 사이드바 너비
+let g:tagbar_autoclose = 1 " 다른 파일 열면 자동으로 닫기
+nnoremap <F8> :TagbarToggle<CR>
+
+" ============ IndentLine 설정
+let g:indentLine_enabled = 1
+let g:indentLine_setIcons = '│'
+let g:indentLine_concealcursor = 'niv'
+ let g:indentLine_tab_chars = ['│'] " 탭 문자마다 표시할 문자 설정
+ let g:indentLine_leadingSpaceChar = ' ' " 스페이스 들여쓰기 시 사용할 문자
+ let g:indentLine_leadingTabChar = '│' " 탭 들여쓰기 시 사용할 문자
 
 " ======= Coc 설정
 " coc.nvim
@@ -441,4 +450,3 @@ let g:lightline = {
 lua << EOF
 require'lspconfig'.pylsp.setup{}
 EOF
-
