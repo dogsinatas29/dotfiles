@@ -36,7 +36,8 @@ Plug 'mhinz/vim-startify' <br>
 Plug 'scrooloose/nerdtree' <br>
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} <br>
 Plug 'nvim-treesitter/playground' <br>
-Plug 'yegappan/taglist' <br>
+Plug 'preservim/tagbar'<br>
+Plug 'Yggdroot/indentLine'<br>
 Plug 'github/copilot.vim' <br>
 Plug 'tpope/vim-fugitive' " Git Wrapper <br>
 Plug 'jackguo380/vim-lsp-cxx-highlight' <br>
