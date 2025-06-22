@@ -13,6 +13,8 @@ Plug 'shaunsingh/nord.nvim'
 
 "Light Line themes 플러그
 Plug 'itchyny/lightline.vim'
+Plug 'romgrk/barbar.nvim'
+Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
 
 " 스타티파이 플러그 인
 Plug 'mhinz/vim-startify'
@@ -25,13 +27,11 @@ Plug 'preservim/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-fugitive' " Git Wrapper
-" Plug 'neoclid:e/coc.nvim', {'brach': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'neovim/nvim-lspconfig'
 Plug 'chrisbra/csv.vim'
 Plug 'blueyed/vim-diminactive'
 Plug 'ryanoasis/vim-devicons'
-
 " telescope 플러그
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim' " 태그 제거
@@ -157,208 +157,10 @@ nnoremap <F8> :TagbarToggle<CR>
 let g:indentLine_enabled = 1
 let g:indentLine_setIcons = '│'
 let g:indentLine_concealcursor = 'niv'
- let g:indentLine_tab_chars = ['│'] " 탭 문자마다 표시할 문자 설정
- let g:indentLine_leadingSpaceChar = ' ' " 스페이스 들여쓰기 시 사용할 문자
- let g:indentLine_leadingTabChar = '│' " 탭 들여쓰기 시 사용할 문자
+let g:indentLine_tab_chars = ['│'] " 탭 문자마다 표시할 문자 설정
+let g:indentLine_leadingSpaceChar = ' ' " 스페이스 들여쓰기 시 사용할 문자
+let g:indentLine_leadingTabChar = '│' " 탭 들여쓰기 시 사용할 문자
 
-" ======= Coc 설정
-" coc.nvim
-" TextEdit might fail if hidden is not set.
-set hidden
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-" Give more space for displaying messages.
-set cmdheight=2
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-" set updatetime=300
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-" Settings for neovim: nevoim does not support signcolumn+number column yet
-"set signcolumn=no
-hi coc_err_hi ctermfg=1 ctermbg=15
-sign define coc_err numhl=coc_err_hi
-sign place 1 line=2 name=coc_err
-hi CocErrorSign ctermfg=gray
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-" Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-highlight Normal     ctermbg=NONE
-highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
-" Floating window background=white, foreground=black
-
-" CocFloating - Pmenu의 옆에 나오는 box & error시 나오는 box
-highlight CocFloating ctermbg=white ctermfg=black
-
-"syntax
-syntax on
-
-"tap size
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-"line number
-set number
-
-"set smartindent
-"hilight search
-set hlsearch
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> 
-
-"backspace
-set backspace=indent,eol,start
-set t_kb=
-
-"mouse wheel
-set mouse=a
-"set nowrap
-set wrap
-" reduce empty space at bottom
-set cmdheight=1
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-"====================================================================================================
-"avoid overriding variables py Vim filetype
-autocmd FileType python setlocal tabstop=4
-      
-" diminactive 설정
-let g:diminactive_use_colorcolumn = 1
-let g:diminactive_enable_focus = 1
-let g:diminactive_use_syntax = 1
-
-" vim-lsp-cxx-hilight 설정
-let g:lsp_cxx_hl_use_text_props = 1
-" Configuration of vim-lsp to use cquery and ccls with vim-lsp
-
-" also see https://github.com/prabirshrestha/vim-lsp/wiki/Servers-cquery
-"
-" cquery always requires these options
-" highlight.enabled = true
-" emitInactiveRegions = true
-if executable('cquery')
-   au User lsp_setup call lsp#register_server({
-      \ 'name': 'cquery',
-      \ 'cmd': {server_info->['cquery']},
-      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-      \ 'initialization_options': {
-      \   'cacheDirectory': '/path/to/cquery/cache',
-      \   'highlight': { 'enabled' : v:true },
-      \   'emitInactiveRegions': v:true
-      \ },
-      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-      \ })
-endif
-
-" also see https://github.com/prabirshrestha/vim-lsp/wiki/Servers-ccls
-"
-" highlight.lsRanges = true
-" is only necessary if vim doesn't have +byte_offset
-if executable('ccls')
-   au User lsp_setup call lsp#register_server({
-      \ 'name': 'ccls',
-      \ 'cmd': {server_info->['ccls']},
-      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-      \ 'initialization_options': {
-      \   'highlight': { 'lsRanges' : v:true },
-      \ },
-      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-      \ })
-endif
 " Configuration of LanguageClient-neovim to use cquery and ccls with
 
 
@@ -445,7 +247,10 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-      
+" 탭라인이 항상 보이도록 설정
+set showtabline=2
+" 마우스 지원 활성화
+set mouse+=a
 " lspconfig 설정
 lua << EOF
 require'lspconfig'.pylsp.setup{}

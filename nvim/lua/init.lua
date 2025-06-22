@@ -1,6 +1,6 @@
 -- gruvbox baby lua Settings
 -- Example config in Lua
-vim.g.gruvbox_baby_function_style = "NONE"
+vim.g.gruvbox_baby_fu:nction_style = "NONE"
 vim.g.gruvbox_baby_keyword_style = "italic"
 
 -- Each highlight group must follow the structure:
@@ -65,5 +65,16 @@ require "nvim-treesitter.configs".setup {
       show_help = '?',
     },
   }
+ -- 여기에 folding 설정을 추가합니다.
+  folding = {
+    enable = true, -- 폴딩 기능 활성화
+    -- 추가적인 folding 관련 옵션 (선택 사항)
+    -- disable = {}, -- 특정 파일 타입에서 폴딩 비활성화
+    -- keybindings = {
+    --   enable = 'fo', -- 예시: 'fo'로 폴딩 토글
+    --   disable = 'fc', -- 예시: 'fc'로 폴딩 비활성화
+    --   toggle = 'fz', -- 예시: 'fz'로 현재 폴드 토글
+    -- },
+  },
 }
 
