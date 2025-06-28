@@ -23,41 +23,45 @@ workspace $ws6 output DVI-D-0<br>
 <br>
 3. nvim : nvim 설정 <br>
 ![i3wm with polybar screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/nvim.png) <br>
-" 플러그 인 설치 <br>
-"======= nord themes <br>
-Plug 'shaunsingh/nord.nvim' <br>
-"Light Line themes 플러그 <br>
-Plug 'itchyny/lightline.vim' <br>
-" 스타티파이 플러그 인 <br>
-Plug 'mhinz/vim-startify' <br>
-" 프로그램 관련 플러그 인 <br>
-Plug 'scrooloose/nerdtree' <br>
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} <br>
-Plug 'nvim-treesitter/playground' <br>
-Plug 'preservim/tagbar'<br>
-Plug 'Yggdroot/indentLine'<br>
-Plug 'github/copilot.vim' <br>
-Plug 'tpope/vim-fugitive' " Git Wrapper <br>
-Plug 'jackguo380/vim-lsp-cxx-highlight' <br>
-Plug 'neovim/nvim-lspconfig' <br>
-Plug 'chrisbra/csv.vim' <br>
-Plug 'blueyed/vim-diminactive' <br>
-Plug 'ryanoasis/vim-devicons' <br>
-" telescope 플러그 <br>
-Plug 'nvim-lua/plenary.nvim' <br>
-Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>
-<br>
+~~" 플러그 인 설치 <br>~~
+~~"======= nord themes <br>~~
+~~Plug 'shaunsingh/nord.nvim' <br>~~
+~~"Light Line themes 플러그 <br>~~
+~~Plug 'itchyny/lightline.vim' <br>~~
+~~" 스타티파이 플러그 인 <br>~~
+~~Plug 'mhinz/vim-startify' <br>~~
+~~" 프로그램 관련 플러그 인 <br>~~
+~~Plug 'scrooloose/nerdtree' <br>~~
+~~Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} <br>~~
+~~Plug 'nvim-treesitter/playground' <br>~~
+~~Plug 'preservim/tagbar'<br>~~
+~~Plug 'Yggdroot/indentLine'<br>~~
+~~Plug 'github/copilot.vim' <br>~~
+~~Plug 'tpope/vim-fugitive' " Git Wrapper <br>~~
+~~Plug 'jackguo380/vim-lsp-cxx-highlight' <br>~~
+~~Plug 'neovim/nvim-lspconfig' <br>~~
+~~Plug 'chrisbra/csv.vim' <br>~~
+~~Plug 'blueyed/vim-diminactive' <br>~~
+~~Plug 'ryanoasis/vim-devicons' <br>~~
+~~" telescope 플러그 <br>~~
+~~Plug 'nvim-lua/plenary.nvim' <br>~~
+~~Plug 'nvim-telescope/telescope.nvim' " 태그 제거 <br>~~
+~~<br>~~
 테마는 Nord 테마입니다.  <br>
-Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요<br>
-
-4. neofetch : neofetch 설정<br>
+~~Coc가 적용되어 있지 않습니다. 계속 문제가 생겨 포기했어요<br>~~
+기존 플러그인 매니저를 plug에서 lazy.vim으로 갈아탔습니다.<br>
+~/.config/nvim/init.lua 파일과 <br>
+~/.config/nvim/lua/plugins/init.lua <br>
+~/.config/nvim/after/plugin/startify.vim<br>
+으로 구조가 바뀌었습니다. 
+5. neofetch : neofetch 설정<br>
 ![neofetch screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/neofetch.png)<br>
 logo.txt에서 원하는 로고로 바꾸시면 됩니다<br>
 <br>
-5. cava <br>
+6. cava <br>
 ![cava screenshot](https://raw.githubusercontent.com/dogsinatas29/dotfiles/main/screenshots/cava.png) <br>
 
-6. 내가 Gnome 환경에서 사용중인 확장 리스트<br>
+7. 내가 Gnome 환경에서 사용중인 확장 리스트<br>
 Applications Overview Tooltip by RaphaelR <br>
 https://extensions.gnome.org/extension/1071/applications-overview-tooltip/<br>
 ArcMenu by andrew_z <br>
@@ -101,7 +105,7 @@ https://extensions.gnome.org/extension/19/user-themes/<br>
 V-Shell (Customize GNOME Shell UI and App Grid) by GdH <br>
 https://extensions.gnome.org/extension/5177/vertical-workspaces/<br>
 
-7. 사용중인 테마는 https://github.com/vinceliuice/Graphite-gtk-theme 를 제가 커스텀 한 테마입니다.<br>
+8. 사용중인 테마는 https://github.com/vinceliuice/Graphite-gtk-theme 를 제가 커스텀 한 테마입니다.<br>
 https://github.com/vinceliuice 에 가보시면 고품질의 GTK 테마가 많이 있습니다. <br>
 
 탑 바를 커스텀하기 위해서는 기본적으로 gnome-shell.css 파일을 편집해주셔야 합니다. <br>
